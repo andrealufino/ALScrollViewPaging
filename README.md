@@ -4,6 +4,7 @@ ALScrollViewPaging
 This UIScrollView subclass provides a method to add paging and a demo project.
 
 Usage
+==================
 
     //create the scrollview with specific frame
     ALScrollViewPaging *scrollView = [[ALScrollViewPaging alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width, 300)];
