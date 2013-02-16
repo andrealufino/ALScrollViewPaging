@@ -18,6 +18,7 @@
 		87227E1D16CE948F00D892B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87227E1C16CE948F00D892B3 /* Default-568h@2x.png */; };
 		87227E2016CE948F00D892B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87227E1F16CE948F00D892B3 /* ViewController.m */; };
 		87227E2316CE948F00D892B3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87227E2116CE948F00D892B3 /* ViewController.xib */; };
+		87227E2F16CE94F100D892B3 /* ALScrollViewPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 87227E2E16CE94F100D892B3 /* ALScrollViewPaging.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		87227E1E16CE948F00D892B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		87227E1F16CE948F00D892B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		87227E2216CE948F00D892B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		87227E2D16CE94F100D892B3 /* ALScrollViewPaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALScrollViewPaging.h; sourceTree = "<group>"; };
+		87227E2E16CE94F100D892B3 /* ALScrollViewPaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALScrollViewPaging.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +86,8 @@
 		87227E0C16CE948F00D892B3 /* ScrollViewPaging */ = {
 			isa = PBXGroup;
 			children = (
-				87227E1516CE948F00D892B3 /* AppDelegate.h */,
-				87227E1616CE948F00D892B3 /* AppDelegate.m */,
-				87227E1E16CE948F00D892B3 /* ViewController.h */,
-				87227E1F16CE948F00D892B3 /* ViewController.m */,
-				87227E2116CE948F00D892B3 /* ViewController.xib */,
+				87227E2916CE94A100D892B3 /* AppDelegate */,
+				87227E2A16CE94AB00D892B3 /* Classes */,
 				87227E0D16CE948F00D892B3 /* Supporting Files */,
 			);
 			path = ScrollViewPaging;
@@ -105,6 +105,43 @@
 				87227E1C16CE948F00D892B3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87227E2916CE94A100D892B3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				87227E1516CE948F00D892B3 /* AppDelegate.h */,
+				87227E1616CE948F00D892B3 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		87227E2A16CE94AB00D892B3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				87227E2C16CE94D700D892B3 /* ALScrollViewPaging */,
+				87227E2B16CE94B100D892B3 /* Main */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		87227E2B16CE94B100D892B3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				87227E1E16CE948F00D892B3 /* ViewController.h */,
+				87227E1F16CE948F00D892B3 /* ViewController.m */,
+				87227E2116CE948F00D892B3 /* ViewController.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		87227E2C16CE94D700D892B3 /* ALScrollViewPaging */ = {
+			isa = PBXGroup;
+			children = (
+				87227E2D16CE94F100D892B3 /* ALScrollViewPaging.h */,
+				87227E2E16CE94F100D892B3 /* ALScrollViewPaging.m */,
+			);
+			path = ALScrollViewPaging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +213,7 @@
 				87227E1316CE948F00D892B3 /* main.m in Sources */,
 				87227E1716CE948F00D892B3 /* AppDelegate.m in Sources */,
 				87227E2016CE948F00D892B3 /* ViewController.m in Sources */,
+				87227E2F16CE94F100D892B3 /* ALScrollViewPaging.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +301,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScrollViewPaging/ScrollViewPaging-Prefix.pch";
 				INFOPLIST_FILE = "ScrollViewPaging/ScrollViewPaging-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +313,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScrollViewPaging/ScrollViewPaging-Prefix.pch";
 				INFOPLIST_FILE = "ScrollViewPaging/ScrollViewPaging-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,6 +338,7 @@
 				87227E2816CE948F00D892B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
