@@ -6,6 +6,8 @@ This UIScrollView subclass provides a method to add paging and a demo project.
 Usage
 ==================
 
+Drag the ALScrollViewPaging folder to your project.
+
 All the views which have to be added to the scrollview MUST have the same width and height of the scrollview.
 
     //create the scrollview with specific frame
