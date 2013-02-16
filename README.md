@@ -23,3 +23,15 @@ All the views which have to be added to the scrollview MUST have the same width 
     
     //add pages to scrollview
     [scrollView addPages:views];
+
+You can have also an UIPageControl placed under the scrollview, simply setting to YES the ```hasPageControl``` property after the scrollview is been added to the superview.
+
+    //add scrollview to the view
+    [self.view addSubview:scrollView];
+    
+    [scrollView setHasPageControl:YES];
+    
+The page control dots can be customized with different colors.
+
+    [scrollView setPageControlCurrentPageColor:[UIColor redColor]];
+    [scrollView setPageControlOtherPagesColor:[UIColor yellowColor]];
