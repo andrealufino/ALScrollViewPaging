@@ -57,6 +57,12 @@ const int kDotWidth = 7;
         [pageControl setPageIndicatorTintColor:[UIColor yellowColor]];
         [pageControl setCurrentPageIndicatorTintColor:[UIColor redColor]];
         [[self superview] addSubview:pageControl];
+    } else {
+        for (UIPageControl *pControl in [[self superview] subviews]) {
+            if ([pControl isEqual:pageControl]) {
+                [pageControl removeFromSuperview];
+            }
+        }
     }
 }
 
