@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     [self.view setBackgroundColor:[UIColor blackColor]];
     
     //create the scrollview with specific frame
