@@ -45,19 +45,29 @@ const int kDotWidth = 7;
 //if is YES, we can create the page control and place it under the scrollview
 - (void)setHasPageControl:(BOOL)hasPageControl {
     _hasPageControl = hasPageControl;
+    //if hasPageControl is true
     if (hasPageControl) {
+        //set number of page based on number of pages to show and set current page to the first object
         [pageControl setNumberOfPages:[_pages count]];
         [pageControl setCurrentPage:0];
+        //calculate the page control width considering that a dot is 20px, so we can multiply by the number of page to have the width of the page control
         int pWidth = kDotWidth * [_pages count];
+        //calculate the scroll view center
         CGFloat scrollViewCenterPointX = self.frame.size.width / 2;
+        //calculate the X and Y coordinates of the page control
         int pageControlX = scrollViewCenterPointX - (pWidth / 2);
         int pageControlY = self.frame.origin.y + self.frame.size.height + 5;
+        //set the frame of the page control
         [pageControl setFrame:CGRectMake(pageControlX, pageControlY, pWidth, 36)];
+        //set target and selector for page control
         [pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
+        //set colors for indicators
         [pageControl setPageIndicatorTintColor:[UIColor yellowColor]];
         [pageControl setCurrentPageIndicatorTintColor:[UIColor redColor]];
+        //add page control to superview
         [[self superview] addSubview:pageControl];
     } else {
+        //remove the page control from superview
         for (UIPageControl *pControl in [[self superview] subviews]) {
             if ([pControl isEqual:pageControl]) {
                 [pageControl removeFromSuperview];
