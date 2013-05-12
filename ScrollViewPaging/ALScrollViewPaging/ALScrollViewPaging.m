@@ -112,7 +112,7 @@ const int kDotWidth = 7;
 - (void)changePage:(id)sender {
     //update the scroll view to the appropriate page
 	CGRect frame;
-	frame.origin.x = self.frame.size.width * self.currentPage;
+	frame.origin.x = self.frame.size.width * pageControl.currentPage;
 	frame.origin.y = 0;
 	frame.size = self.frame.size;
 	[self scrollRectToVisible:frame animated:YES];
